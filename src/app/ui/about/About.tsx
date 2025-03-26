@@ -18,11 +18,17 @@ const About: React.FC = () => {
         "Node.js",
         "FastAPI",
         "Docker",
+        "Java",
+        "mongoDB",
+        "SQL",
+        "Spring Boot",
+        "Python",
+        "React Native",
         "Tailwind CSS",
-        "sharepoint",
+        "SharePoint",
         "Power Automate",
         "Power Apps",
-        "github actions",
+        "Github Workflow",
     ];
 
     return (
@@ -31,7 +37,7 @@ const About: React.FC = () => {
                 <div className="md:col-span-1 col-span-2">
                     <img src={avatar.src} alt="avatar" />
                 </div>
-                <div className="md:col-span-1 col-span-2">
+                <div className="md:col-span-1 col-span-2 md:mt-0 mt-4">
                     <div className="flex flex-col gap-2">
                         <h1 className="text-2xl font-bold">About Me</h1>
                         <p className="text-sm">
@@ -42,14 +48,14 @@ const About: React.FC = () => {
                             {skills.map((skill) => (
                                 <span
                                     key={skill}
-                                    className="p-2 border-1 border-[##82c6ba] rounded-md"
+                                    className="p-2 border-1 border-[#2dd4bf] rounded-md"
                                 >
                                     {skill}
                                 </span>
                             ))}
                         </div>
                         <div className="mt-2">
-                            <button className="bg-[#82c6ba] p-3 rounded-4xl flex flex-row gap-3 cursor-pointer">
+                            <button className="bg-[#2dd4bf] p-3 rounded-4xl flex flex-row gap-3 cursor-pointer">
                                 Download CV
                                 <ArrowDownTrayIcon className="size-6" />
                             </button>
@@ -57,12 +63,12 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-40">
+            <div className="mt-20">
                 <h1 className="text-center text-4xl capitalize font-bold">
                     what i do
                 </h1>
                 <div className="grid grid-cols-3 mt-12 gap-6">
-                    <div className="md:col-span-1 col-span-3">
+                    <div className="md:col-span-1 col-span-3 shadow-2xl p-4 rounded-2xl">
                         <div className="flex flex-col gap-2">
                             <CommandLineIcon className="size-10" />
                             <h1 className="text-2xl font-bold">
@@ -75,7 +81,7 @@ const About: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="md:col-span-1 col-span-3">
+                    <div className="md:col-span-1 col-span-3 shadow-2xl p-4 rounded-2xl">
                         <div className="flex flex-col gap-2">
                             <CodeBracketIcon className="size-10" />
                             <h1 className="text-2xl font-bold">
@@ -88,7 +94,7 @@ const About: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="md:col-span-1 col-span-3">
+                    <div className="md:col-span-1 col-span-3 shadow-2xl p-4 rounded-2xl">
                         <div className="flex flex-col gap-2">
                             <RocketLaunchIcon className="size-10" />
                             <h1 className="text-2xl font-bold">Deployment</h1>

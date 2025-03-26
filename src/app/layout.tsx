@@ -33,7 +33,7 @@ export default function RootLayout({
                 <div
                     className="inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: `linear-gradient(rgba(var(--overlay-color), 0.7), rgba(var(--overlay-color), 0.7)), url(${background.src})`,
+                        backgroundImage: `linear-gradient(rgba(var(--overlay-color), 0.8), rgba(var(--overlay-color), 0.8)), url(${background.src})`,
                     }}
                 >
                     <div className="bg-transparent">

@@ -39,7 +39,7 @@ const Nav: React.FC = () => {
     return (
         <div className="flex flex-row items-center justify-between">
             <div>
-                <span className="bg-[#82c6ba] text-white uppercase rounded-md px-2 py-1 md:block hidden">
+                <span className="bg-[#2dd4bf] text-white uppercase rounded-md px-2 py-1 md:block hidden">
                     resume
                 </span>
                 <button
@@ -81,7 +81,7 @@ const Nav: React.FC = () => {
                 }`}
             >
                 <div className="flex justify-between items-center p-4 border-b">
-                    <span className="bg-[#82c6ba] text-white uppercase rounded-md px-2 py-1">
+                    <span className="bg-[#2dd4bf] text-white uppercase rounded-md px-2 py-1">
                         resume
                     </span>
                     <button

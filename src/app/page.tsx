@@ -1,17 +1,19 @@
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { Facebook, Github, Linkedin, X } from "@/ui/social-media-icons/icons";
 import icon from "@/public/icon.jpg";
-import About from "./ui/about/About";
-import Portfolio from "./ui/portfolio/Portfolio";
+import About from "@/ui/about/About";
+import Portfolio from "@/ui/portfolio/Portfolio";
+import SkillComponent from "@/ui/skills/SkillComponent";
+import EWComponent from "@/ui/experiences/EWComponent";
 
 export default function Home() {
     return (
         <div>
-            <div className="min-h-[600px] grid grid-cols-2 gap-4 py-12  items-center">
+            <div className="min-h-[600px] grid grid-cols-2 gap-4 py-12 px-6 items-center">
                 <div className="md:col-span-1 col-span-2 md:order-1 order-2">
-                    <div className="flex flex-col gap-4 sm:justify-center items-center md:items-start">
+                    <div className="flex flex-col gap-4 items-center md:items-start sm:mt-4 mt-0">
                         <div>
-                            <span className="text-md font-bold text-white bg-[#82c6ba] py-2 px-4 rounded-tl-2xl rounded-r-2xl">
+                            <span className="text-md font-bold text-white bg-[#2dd4bf] py-2 px-4 rounded-tl-2xl rounded-r-2xl">
                                 Hello, I'm
                             </span>
                         </div>
@@ -50,6 +52,7 @@ export default function Home() {
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/kim-wong-ab47a220a/"
+                                target="_blank"
                                 className="hover:opacity-80"
                             >
                                 <Linkedin />
@@ -75,9 +78,19 @@ export default function Home() {
                     <About />
                 </div>
             </div>
-            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] py-12">
+            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] py-4">
                 <div className="container mx-auto px-6">
                     <Portfolio />
+                </div>
+            </div>
+            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] bg-[var(--background)] text-[var(--foreground)] py-12">
+                <div className="container mx-auto px-6">
+                    <SkillComponent />
+                </div>
+            </div>
+            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] py-4">
+                <div className="container mx-auto px-6">
+                    <EWComponent />
                 </div>
             </div>
         </div>
