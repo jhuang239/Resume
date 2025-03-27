@@ -1,6 +1,5 @@
 "use client";
 import avatar from "@/public/avatar.png";
-import Link from "next/link";
 import {
     ArrowDownTrayIcon,
     RocketLaunchIcon,
@@ -8,6 +7,7 @@ import {
     CommandLineIcon,
 } from "@heroicons/react/24/solid";
 import { downloadCV } from "@/lib/downloadCV";
+import Image from "next/image";
 
 const About: React.FC = () => {
     const skills = [
@@ -36,14 +36,21 @@ const About: React.FC = () => {
         <div>
             <div className="grid grid-cols-2 gap-4 items-center">
                 <div className="md:col-span-1 col-span-2">
-                    <img src={avatar.src} alt="avatar" />
+                    <Image
+                        src={avatar.src}
+                        width={0}
+                        height={0}
+                        alt="avatar"
+                        style={{ width: "100%", height: "auto" }}
+                        sizes="100vw"
+                    />
                 </div>
                 <div className="md:col-span-1 col-span-2 md:mt-0 mt-4">
                     <div className="flex flex-col gap-2">
                         <h1 className="text-2xl font-bold">About Me</h1>
                         <p className="text-sm">
-                            Hello I'm Kim, web developer based on Hong Kong, a
-                            former sharepoint developer, I am good at
+                            Hello I&apos;m Kim, web developer based on Hong
+                            Kong, a former sharepoint developer, I am good at
                         </p>
                         <div className="flex flex-row gap-3 flex-wrap">
                             {skills.map((skill) => (

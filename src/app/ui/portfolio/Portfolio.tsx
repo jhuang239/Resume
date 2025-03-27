@@ -3,6 +3,7 @@ import { Carousel, ThemeProvider, createTheme } from "flowbite-react";
 import shopco from "@/public/shopco.jpeg";
 import eLearning from "@/public/E-learning.png";
 import natours from "@/public/natours.jpeg";
+import Image from "next/image";
 
 const customTheme = createTheme({
     carousel: {
@@ -51,10 +52,12 @@ const Portfolio: React.FC = () => {
                     <div className="flex h-full">
                         <div className="grid grid-cols-2 gap-4">
                             <div className="md:col-span-1 col-span-2 justify-self-center">
-                                <img
+                                <Image
                                     src={shopco.src}
                                     alt=""
                                     className="object-cover md:h-100 h-85"
+                                    width={shopco.width} // Provide any reasonable base width
+                                    height={shopco.height} // Provide any reasonable base height
                                 />
                             </div>
                             <div className="h-full w-full md:col-span-1 col-span-2">
@@ -100,10 +103,12 @@ const Portfolio: React.FC = () => {
                     <div className="flex h-full">
                         <div className="grid grid-cols-2 gap-4">
                             <div className="md:col-span-1 col-span-2 justify-self-center">
-                                <img
+                                <Image
                                     src={eLearning.src}
                                     alt=""
-                                    className="object-cover md:h-100 h-80"
+                                    className="object-cover md:h-100 h-80 w-auto"
+                                    width={eLearning.width} // Provide any reasonable base width
+                                    height={eLearning.height} // Provide any reasonable base height
                                 />
                             </div>
                             <div className="h-full w-full md:col-span-1 col-span-2">
@@ -149,10 +154,12 @@ const Portfolio: React.FC = () => {
                     <div className="flex h-full">
                         <div className="grid grid-cols-2 gap-4">
                             <div className="md:col-span-1 col-span-2 justify-self-center">
-                                <img
+                                <Image
                                     src={natours.src}
                                     alt=""
                                     className="object-cover md:h-100 h-80"
+                                    width={natours.width} // Provide any reasonable base width
+                                    height={natours.height} // Provide any reasonable base height
                                 />
                             </div>
                             <div className="h-full w-full md:col-span-1 col-span-2">

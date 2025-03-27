@@ -1,10 +1,11 @@
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { Facebook, Github, Linkedin, X } from "@/ui/social-media-icons/icons";
 import icon from "@/public/icon.jpg";
 import About from "@/ui/about/About";
 import Portfolio from "@/ui/portfolio/Portfolio";
 import SkillComponent from "@/ui/skills/SkillComponent";
 import EWComponent from "@/ui/experiences/EWComponent";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -14,7 +15,7 @@ export default function Home() {
                     <div className="flex flex-col gap-4 items-center md:items-start sm:mt-4 mt-0">
                         <div>
                             <span className="text-md font-bold text-white bg-[#2dd4bf] py-2 px-4 rounded-tl-2xl rounded-r-2xl">
-                                Hello, I'm
+                                Hello, I&apos;m
                             </span>
                         </div>
                         <h1 className="text-4xl font-bold">Kim Wong</h1>
@@ -61,10 +62,14 @@ export default function Home() {
                 </div>
                 <div className="md:col-span-1 col-span-2 md:order-2 order-1">
                     <div className="flex justify-center">
-                        <img
+                        <Image
                             src={icon.src}
+                            width={0}
+                            height={0}
                             alt="Kim Wong"
                             className="w-80 h-80 rounded-full border-8 border-gray-300 shadow-2xl"
+                            sizes="100vw"
+                            style={{ width: "50%", height: "auto" }}
                         />
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 import Experience from "@/ui/experiences/Experience";
 import Education from "@/ui/experiences/Education";
-import { describe } from "node:test";
 
 const educations = [
     {
