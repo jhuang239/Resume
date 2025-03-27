@@ -63,7 +63,9 @@ const EWComponent: React.FC = () => {
     return (
         <div className="grid grid-cols-2 md:gap-20 gap-10">
             <div className="md:col-span-1 col-span-2">
-                <h1 className="text-4xl font-bold capitalize">Education</h1>
+                <h1 className="text-4xl font-bold capitalize py-10">
+                    Education
+                </h1>
                 <div className="flex flex-col gap-4 w-full self-center mt-4 justify-self-center">
                     {educations.map((education) => (
                         <Education
@@ -79,7 +81,7 @@ const EWComponent: React.FC = () => {
                 </div>
             </div>
             <div className="md:col-span-1 col-span-2">
-                <h1 className="text-4xl font-bold capitalize">
+                <h1 className="text-4xl font-bold capitalize py-10">
                     Work experiences
                 </h1>
                 <div className="flex flex-col gap-4 w-full self-center mt-4 justify-self-center">

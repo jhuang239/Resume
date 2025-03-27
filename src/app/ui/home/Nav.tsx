@@ -54,19 +54,28 @@ const Nav: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="md:block hidden">
                 <ul className="flex flex-row gap-10 justify-between">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className={`capitalize pb-1 ${
-                                pathname === item.href
-                                    ? "font-bold border-b-2"
-                                    : ""
-                            }`}
-                        >
-                            {item.label}
-                        </Link>
-                    ))}
+                    {navItems.map((item) =>
+                        item.label === "home" ? (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={`capitalize pb-1 ${
+                                    pathname === item.href
+                                        ? "font-bold border-b-2"
+                                        : ""
+                                }`}
+                            >
+                                {item.label}
+                            </Link>
+                        ) : (
+                            <li
+                                key={item.label}
+                                className="capitalize pb-1 cursor-pointer"
+                            >
+                                {item.label}
+                            </li>
+                        )
+                    )}
                     <li className="capitalize pb-1">
                         <ThemeToggle />
                     </li>

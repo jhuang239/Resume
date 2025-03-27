@@ -15,8 +15,8 @@ const technicalSkills = [
     { name: "typescript", percentage: 80 },
     { name: "node.js", percentage: 80 },
     { name: "sql", percentage: 75 },
-    { name: "python", percentage: 65 },
-    { name: "java", percentage: 60 },
+    { name: "java", percentage: 65 },
+    { name: "python", percentage: 60 },
 ];
 
 const customTheme = createTheme({

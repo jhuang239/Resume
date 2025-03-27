@@ -19,17 +19,13 @@ export default function Home() {
                         </div>
                         <h1 className="text-4xl font-bold">Kim Wong</h1>
                         <h4 className="font-bold text-xl capitalize">
-                            web developer
+                            Software Engineer
                         </h4>
                         <div className="flex flex-row items-end gap-2">
                             <EnvelopeIcon className="size-4" />
                             <span className="text-sm">
                                 jk.wong1118@gmail.com
                             </span>
-                        </div>
-                        <div className="flex flex-row items-end gap-2">
-                            <PhoneIcon className="size-4" />
-                            <span className="text-sm">+852 57100591</span>
                         </div>
                         <div className="flex flex-row items-end gap-2">
                             <MapPinIcon className="size-4" />
@@ -88,7 +84,7 @@ export default function Home() {
                     <SkillComponent />
                 </div>
             </div>
-            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] py-4">
+            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] pt-4 pb-24">
                 <div className="container mx-auto px-6">
                     <EWComponent />
                 </div>
