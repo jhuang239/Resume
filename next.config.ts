@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     /* config options here */
     reactStrictMode: true,
     devIndicators: false,
+    output: "standalone",
 };
 
 export default withFlowbiteReact(nextConfig);

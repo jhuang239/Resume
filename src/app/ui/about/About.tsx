@@ -1,11 +1,13 @@
 "use client";
 import avatar from "@/public/avatar.png";
+import Link from "next/link";
 import {
     ArrowDownTrayIcon,
     RocketLaunchIcon,
     CodeBracketIcon,
     CommandLineIcon,
 } from "@heroicons/react/24/solid";
+import { downloadCV } from "@/lib/downloadCV";
 
 const About: React.FC = () => {
     const skills = [
@@ -14,7 +16,6 @@ const About: React.FC = () => {
         "JavaScript",
         "TypeScript",
         "React",
-        "Next.js",
         "Node.js",
         "FastAPI",
         "Docker",
@@ -55,7 +56,10 @@ const About: React.FC = () => {
                             ))}
                         </div>
                         <div className="mt-2">
-                            <button className="bg-[#2dd4bf] p-3 rounded-4xl flex flex-row gap-3 cursor-pointer">
+                            <button
+                                onClick={downloadCV}
+                                className="bg-[#2dd4bf] p-3 rounded-4xl flex flex-row gap-3 cursor-pointer"
+                            >
                                 Download CV
                                 <ArrowDownTrayIcon className="size-6" />
                             </button>

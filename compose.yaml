@@ -1,0 +1,22 @@
+services:
+  resume:
+    container_name: resume
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: resume:latest
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.resume.rule=Host(`resume.${DOMAIN}`)
+      - traefik.http.services.resume.loadbalancer.server.port=80
+      - traefik.http.routers.resume.entrypoints=websecure
+      - traefik.http.routers.resume.tls=true
+      - traefik.http.routers.resume.tls.certresolver=cloudflare
+      - traefik.http.routers.resume.service=resume
+
+networks:
+  traefik-net:
+    external: true
