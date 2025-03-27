@@ -40,7 +40,7 @@ ENV NODE_ENV=production
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy the built Next.js app from builder
-COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/next.config.ts ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next/standalone ./
