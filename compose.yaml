@@ -1,15 +1,31 @@
+# compose.yaml
+version: '3'
+
 services:
-  resume:
-    container_name: resume
+  nextjs:
+    container_name: resume-nextjs
     build:
       context: .
-      dockerfile: Dockerfile
-    image: resume:latest
+      dockerfile: Dockerfile.nextjs
     restart: unless-stopped
-    networks:
-      - traefik-net
+    image: resume-nextjs:latest
     environment:
       - NODE_ENV=production
+    networks:
+      - internal
+
+  nginx:
+    container_name: resume-nginx
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    restart: unless-stopped
+    image: resume-nginx:latest
+    networks:
+      - internal
+      - traefik-net
+    depends_on:
+      - nextjs
     labels:
       - traefik.enable=true
       - traefik.http.routers.resume.rule=Host(`resume.${DOMAIN}`)
@@ -20,5 +36,7 @@ services:
       - traefik.http.routers.resume.service=resume
 
 networks:
+  internal:
+    name: resume_internal
   traefik-net:
     external: true
