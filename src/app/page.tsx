@@ -64,12 +64,10 @@ export default function Home() {
                     <div className="flex justify-center">
                         <Image
                             src={icon.src}
-                            width={0}
-                            height={0}
+                            width={icon.width}
+                            height={icon.height}
                             alt="Kim Wong"
                             className="w-80 h-80 rounded-full border-8 border-gray-300 shadow-2xl"
-                            sizes="100vw"
-                            style={{ width: "50%", height: "auto" }}
                         />
                     </div>
                 </div>

@@ -35,14 +35,12 @@ const About: React.FC = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-4 items-center">
-                <div className="md:col-span-1 col-span-2">
+                <div className="md:col-span-1 col-span-2 justify-self-center">
                     <Image
                         src={avatar.src}
-                        width={0}
-                        height={0}
+                        width={avatar.width}
+                        height={avatar.height}
                         alt="avatar"
-                        style={{ width: "100%", height: "auto" }}
-                        sizes="100vw"
                     />
                 </div>
                 <div className="md:col-span-1 col-span-2 md:mt-0 mt-4">
