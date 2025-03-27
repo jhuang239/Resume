@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     image: resume:latest
     restart: unless-stopped
+    networks:
+      - traefik-net
     environment:
       - NODE_ENV=production
     labels:
