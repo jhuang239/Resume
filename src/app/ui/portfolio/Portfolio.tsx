@@ -189,7 +189,7 @@ const Portfolio: React.FC = () => {
                                             className="bg-[#0BCEAF] py-2 px-4 rounded-4xl flex flex-row gap-3 cursor-pointer capitalize"
                                             onClick={() => {
                                                 window.open(
-                                                    "https://natours.codemonkeykim.dev/",
+                                                    "https://css.codemonkeykim.dev/",
                                                     "_blank"
                                                 );
                                             }}
