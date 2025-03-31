@@ -101,18 +101,34 @@ const Nav: React.FC = () => {
                     </button>
                 </div>
                 <ul className="flex flex-col p-4">
-                    {navItems.map((item) => (
-                        <li key={item.href} className="py-2">
-                            <Link
-                                href={item.href}
-                                className={`block capitalize py-2 ${
-                                    pathname === item.href ? "font-bold" : ""
-                                }`}
-                            >
-                                {item.label}
-                            </Link>
-                        </li>
-                    ))}
+                    {navItems.map((item) =>
+                        item.label === "home" ? (
+                            <li key={item.href} className="py-2">
+                                <Link
+                                    href={item.href}
+                                    className={`block capitalize py-2 ${
+                                        pathname === item.href
+                                            ? "font-bold"
+                                            : ""
+                                    }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ) : (
+                            <li key={item.href} className="py-2 cursor-pointer">
+                                <span
+                                    className={`block capitalize py-2 ${
+                                        pathname === item.href
+                                            ? "font-bold"
+                                            : ""
+                                    }`}
+                                >
+                                    {item.label}
+                                </span>
+                            </li>
+                        )
+                    )}
                     <li className="py-3 mt-2 border-t">
                         <div className="flex items-center justify-between">
                             <span className="capitalize">Theme</span>

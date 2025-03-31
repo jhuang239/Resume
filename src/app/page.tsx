@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <div>
             <div className="min-h-[600px] grid grid-cols-2 gap-4 py-12 px-6 items-center">
-                <div className="md:col-span-1 col-span-2 md:order-1 order-2">
+                <div className="md:col-span-1 col-span-2 md:order-1 order-2 justify-self-center">
                     <div className="flex flex-col gap-4 items-center md:items-start sm:mt-4 mt-0">
                         <div>
                             <span className="text-md font-bold text-white bg-[#2dd4bf] py-2 px-4 rounded-tl-2xl rounded-r-2xl">
