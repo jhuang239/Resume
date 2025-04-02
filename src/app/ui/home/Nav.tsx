@@ -101,9 +101,8 @@ const Nav: React.FC = () => {
                 </div>
                 <ul className="flex flex-col p-4">
                     {navItems.map((item) => (
-                        <li className="py-4">
+                        <li key={item.href} className="py-4">
                             <Link
-                                key={item.href}
                                 href={
                                     item.href.startsWith("/") &&
                                     item.href !== "/"
