@@ -72,22 +72,34 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] bg-[var(--background)] text-[var(--foreground)] py-12">
+            <div
+                id="about"
+                className="w-screen relative left-[50%] right-[50%] mx-[-50vw] bg-[var(--background)] text-[var(--foreground)] py-12"
+            >
                 <div className="container mx-auto px-6">
                     <About />
                 </div>
             </div>
-            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] py-4">
+            <div
+                id="portfolio"
+                className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] py-4"
+            >
                 <div className="container mx-auto px-6">
                     <Portfolio />
                 </div>
             </div>
-            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] bg-[var(--background)] text-[var(--foreground)] py-12">
+            <div
+                id="skills"
+                className="w-screen relative left-[50%] right-[50%] mx-[-50vw] bg-[var(--background)] text-[var(--foreground)] py-12"
+            >
                 <div className="container mx-auto px-6">
                     <SkillComponent />
                 </div>
             </div>
-            <div className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] pt-4 pb-24">
+            <div
+                id="experiences"
+                className="w-screen relative left-[50%] right-[50%] mx-[-50vw] text-[var(--foreground)] pt-4 pb-24"
+            >
                 <div className="container mx-auto px-6">
                     <EWComponent />
                 </div>

@@ -30,10 +30,10 @@ const Nav: React.FC = () => {
 
     const navItems = [
         { href: "/", label: "home" },
-        { href: "/about", label: "about" },
-        { href: "/skills", label: "skills" },
-        { href: "/experiences", label: "experiences" },
-        { href: "/portfolio", label: "portfolio" },
+        { href: "about", label: "about" },
+        { href: "skills", label: "skills" },
+        { href: "experiences", label: "experiences" },
+        { href: "portfolio", label: "portfolio" },
     ];
 
     return (
@@ -54,28 +54,27 @@ const Nav: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="md:block hidden">
                 <ul className="flex flex-row gap-10 justify-between">
-                    {navItems.map((item) =>
-                        item.label === "home" ? (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={`capitalize pb-1 ${
-                                    pathname === item.href
-                                        ? "font-bold border-b-2"
-                                        : ""
-                                }`}
-                            >
-                                {item.label}
-                            </Link>
-                        ) : (
-                            <li
-                                key={item.label}
-                                className="capitalize pb-1 cursor-pointer"
-                            >
-                                {item.label}
-                            </li>
-                        )
-                    )}
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.href}
+                            href={
+                                item.href.startsWith("/") && item.href !== "/"
+                                    ? item.href
+                                    : item.href === "/"
+                                    ? "/"
+                                    : `/#${item.label}`
+                            }
+                            scroll={!item.href.includes("#")}
+                            className={`capitalize pb-1 ${
+                                pathname === item.href ||
+                                (pathname === "/" && item.href.includes("#"))
+                                    ? "font-bold border-b-2"
+                                    : ""
+                            }`}
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
                     <li className="capitalize pb-1">
                         <ThemeToggle />
                     </li>
@@ -101,34 +100,31 @@ const Nav: React.FC = () => {
                     </button>
                 </div>
                 <ul className="flex flex-col p-4">
-                    {navItems.map((item) =>
-                        item.label === "home" ? (
-                            <li key={item.href} className="py-2">
-                                <Link
-                                    href={item.href}
-                                    className={`block capitalize py-2 ${
-                                        pathname === item.href
-                                            ? "font-bold"
-                                            : ""
-                                    }`}
-                                >
-                                    {item.label}
-                                </Link>
-                            </li>
-                        ) : (
-                            <li key={item.href} className="py-2 cursor-pointer">
-                                <span
-                                    className={`block capitalize py-2 ${
-                                        pathname === item.href
-                                            ? "font-bold"
-                                            : ""
-                                    }`}
-                                >
-                                    {item.label}
-                                </span>
-                            </li>
-                        )
-                    )}
+                    {navItems.map((item) => (
+                        <li className="py-4">
+                            <Link
+                                key={item.href}
+                                href={
+                                    item.href.startsWith("/") &&
+                                    item.href !== "/"
+                                        ? item.href
+                                        : item.href === "/"
+                                        ? "/"
+                                        : `/#${item.label}`
+                                }
+                                scroll={!item.href.includes("#")}
+                                className={`block capitalize ${
+                                    pathname === item.href ||
+                                    (pathname === "/" &&
+                                        item.href.includes("#"))
+                                        ? "font-bold"
+                                        : ""
+                                }`}
+                            >
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
                     <li className="py-3 mt-2 border-t">
                         <div className="flex items-center justify-between">
                             <span className="capitalize">Theme</span>
