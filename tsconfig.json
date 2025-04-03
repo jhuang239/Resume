@@ -18,9 +18,10 @@
                 "name": "next"
             }
         ],
+        "baseUrl": "./",
         "paths": {
             "@/*": ["./src/*"],
-            "@/ui/*": ["./src/app/ui/*"],
+            "@/ui/*": ["./src/ui/*"],
             "@/public/*": ["./public/*"],
             "@/lib/*": ["./src/lib/*"]
         }
