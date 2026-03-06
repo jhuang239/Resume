@@ -36,7 +36,7 @@ const experiences = [
         position: "Full Stack Developer",
         company: "Gold Label Technology Limited",
         startDate: "Apr, 2025",
-        endDate: "Present",
+        endDate: "Dec, 2025",
         description:
             "Developed and maintained the inventory system using modern web application frameworks like React, Node.js, Spring-boot. Deploy the application on AWS EC2 with docker container. \nDeveloped and upgraded the Android mobile application mainly for RFID Inventory system control the RFID scanner, stock in, stock out & stock take for managing the Inventory system.",
     },
