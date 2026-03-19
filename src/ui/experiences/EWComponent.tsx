@@ -33,6 +33,14 @@ const educations = [
 
 const experiences = [
     {
+        position: "Programmer",
+        company: "Kai Shing Management Services Limited",
+        startDate: "Jan, 2026",
+        endDate: "Present",
+        description:
+            "To assist in collecting user requirements and transforming into functional requirements and technical specifications. System design, coding, testing and deploying application programs and systems. Maintenance/bug fix of web applications with various tools and technologies. To liaise with and support System Analyst for user requirement collection, system analysis and design; Support user training and prepare related technical documentation. Other ad hoc duties as assigned by supervisor.",
+    },
+    {
         position: "Full Stack Developer",
         company: "Gold Label Technology Limited",
         startDate: "Apr, 2025",
