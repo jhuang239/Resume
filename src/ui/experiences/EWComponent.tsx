@@ -56,22 +56,22 @@ const experiences = [
         description:
             "Mainly focusing on system integration, Microsoft M365 application development Sharepoint, Powerapps, Power Automate, Power Pages",
     },
-    {
-        position: "Mobile Application Developer Intern",
-        company: "Alpha AI Limited",
-        startDate: "Dec, 2021",
-        endDate: "Jan, 2022",
-        description:
-            "Responsible for mobile application maintenance, upgrade and develop. Mainly using React Native for mobile app development.",
-    },
-    {
-        position: "Software Engineer",
-        company: "Quantr Limited",
-        startDate: "Jan, 2020",
-        endDate: "Jul, 2020",
-        description:
-            "Responsible for developing the SharePoint web parts in the portal. Using React JS for development.",
-    },
+    // {
+    //     position: "Mobile Application Developer Intern",
+    //     company: "Alpha AI Limited",
+    //     startDate: "Dec, 2021",
+    //     endDate: "Jan, 2022",
+    //     description:
+    //         "Responsible for mobile application maintenance, upgrade and develop. Mainly using React Native for mobile app development.",
+    // },
+    // {
+    //     position: "Software Engineer",
+    //     company: "Quantr Limited",
+    //     startDate: "Jan, 2020",
+    //     endDate: "Jul, 2020",
+    //     description:
+    //         "Responsible for developing the SharePoint web parts in the portal. Using React JS for development.",
+    // },
 ];
 
 const EWComponent: React.FC = () => {
